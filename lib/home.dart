@@ -1,7 +1,9 @@
-import 'package:attendance_frontend/theme/asset.dart';
+import 'package:attendance_frontend/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+// ignore: unused_import
 import 'history.dart';
+import 'package:attendance_frontend/widget/history.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -18,18 +20,20 @@ class _HomeState extends State<Home> {
         children: [
           Container(
             decoration: BoxDecoration(
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30),
+                color: blueColor,
+                borderRadius: const BorderRadius.only(
+                  bottomLeft: Radius.circular(20),
+                  bottomRight: Radius.circular(20),
                 )),
             child: Column(children: [
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
+                  horizontal: 10,
+                  vertical: 15,
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10),
+                  // ignore: avoid_unnecessary_containers
                   child: Container(
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -38,32 +42,28 @@ class _HomeState extends State<Home> {
                               radius: 35,
                               backgroundColor: Colors.white,
                               child: CircleAvatar(
-                                backgroundColor: Colors.lightBlueAccent,
+                                backgroundColor: blueColor,
                                 radius: 30,
                                 child: Icon(
                                   Icons.person,
                                   size: 35,
-                                  color: Colors.white,
+                                  color: whiteColor,
                                 ),
                               )),
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Container(
-                                child: Text(
-                                  'Bagus Slamet Oetomo',
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 16,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
+                              Text(
+                                // 'Bagus Slamet Oetomo',
+                                'Irvan Muhammad Sindy',
+                                style: whiteTextStyle.copyWith(
+                                  fontSize: 18,
+                                  fontWeight: semiBold,
                                 ),
                               ),
-                              Container(
-                                child: Text(
-                                  'ICT / Programmer',
-                                  style:
-                                      GoogleFonts.poppins(color: Colors.white),
-                                ),
+                              Text(
+                                'ICT - Programmer',
+                                style: GoogleFonts.poppins(color: Colors.white),
                               )
                             ],
                           )
@@ -76,101 +76,129 @@ class _HomeState extends State<Home> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Container(
-              margin: EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.only(top: 20),
               child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                   child: SizedBox(
                     width: MediaQuery.of(context).size.height / 1,
                     height: 110,
-                    child: Container(
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Container(
-                              child: Column(
-                                children: <Widget>[
-                                  Container(
-                                    margin: EdgeInsets.only(left: 20, top: 20),
-                                    child: Text('Sick'),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Column(
+                            children: <Widget>[
+                              Container(
+                                margin:
+                                    const EdgeInsets.only(left: 20, top: 20),
+                                child: Text(
+                                  'Sick',
+                                  style: redTextStyle.copyWith(
+                                    fontSize: 14,
+                                    fontWeight: light,
                                   ),
-                                  Container(
-                                    margin: EdgeInsets.only(left: 20),
-                                    child: Text(
-                                      '8',
-                                      style: googleCount,
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
-                            ),
-                            Container(
-                              child: Column(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(left: 20, top: 20),
-                                    child: Text('Absent'),
+                              Container(
+                                margin: const EdgeInsets.only(left: 20),
+                                child: Text(
+                                  '4',
+                                  style: googleCount.copyWith(
+                                    color: redColor,
                                   ),
-                                  Container(
-                                    margin: EdgeInsets.only(left: 20),
-                                    child: Text(
-                                      '1',
-                                      style: googleCount,
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
-                            ),
-                            Container(
-                              child: Column(
-                                children: [
-                                  Container(
-                                    margin: EdgeInsets.only(left: 20, top: 20),
-                                    child: Text('Permit'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                margin:
+                                    const EdgeInsets.only(left: 20, top: 20),
+                                child: Text(
+                                  'Absent',
+                                  style: orangeTextStyle.copyWith(
+                                    fontSize: 14,
+                                    fontWeight: light,
                                   ),
-                                  Container(
-                                    margin: EdgeInsets.only(left: 20),
-                                    child: Text(
-                                      '12',
-                                      style: googleCount,
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
-                            ),
-                          ]),
-                    ),
+                              Container(
+                                margin: const EdgeInsets.only(left: 20),
+                                child: Text(
+                                  '2',
+                                  style: googleCount.copyWith(
+                                    color: orangeColor,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.only(
+                                  left: 20,
+                                  top: 20,
+                                ),
+                                child: Text(
+                                  'Permit',
+                                  style: navyTextStyle.copyWith(
+                                    fontSize: 14,
+                                    fontWeight: light,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: const EdgeInsets.only(left: 20),
+                                child: Text(
+                                  '6',
+                                  style: googleCount.copyWith(
+                                    color: navyColor,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ]),
                   )),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Container(
-              margin: EdgeInsets.only(top: 20),
+              margin: const EdgeInsets.only(top: 20),
               child: Center(
                 child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Column(
                         children: [
-                          Container(
-                            child: Text('08:00', style: googleTime),
+                          Text(
+                            '08:00',
+                            style: googleTime.copyWith(
+                              color: navyColor,
+                              fontWeight: bold,
+                            ),
                           ),
-                          Container(
-                            child: Text('Jam Masuk'),
-                          )
+                          Text(
+                            'Jam Masuk',
+                            style: navyTextStyle,
+                          ),
                         ],
                       ),
                       Column(
                         children: [
-                          Container(
-                            child: Text(
-                              '17:00',
-                              style: googleTime,
+                          Text(
+                            '17:00',
+                            style: googleTime.copyWith(
+                              color: redColor,
+                              fontWeight: bold,
                             ),
                           ),
-                          Container(
-                            child: Text('Jam Pulang'),
+                          Text(
+                            'Jam Pulang',
+                            style: redTextStyle,
                           )
                         ],
                       )
@@ -178,32 +206,23 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Container(
-              margin: EdgeInsets.only(top: 20),
-              child: Card(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)),
-                child: SizedBox(
-                  width: MediaQuery.of(context).size.height / 1,
-                  height: 300,
-                  child: Column(children: [
-                    Container(
-                      margin: EdgeInsets.only(top: 10),
-                      child: Text(
-                        'History in 1 Week',
-                        style: GoogleFonts.poppins(
-                          fontSize: 14,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ]),
-                ),
+          Container(
+            margin: const EdgeInsets.only(
+              top: 30,
+              right: 20,
+              left: 20,
+            ),
+            child: Text(
+              'History in 3 day',
+              style: blackTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: semiBold,
               ),
             ),
-          )
+          ),
+          // history
+          const HistoryAttendance(),
+          const HistoryAttendance(),
         ],
       ),
     ));
