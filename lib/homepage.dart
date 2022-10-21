@@ -1,3 +1,4 @@
+// ignore: unused_import
 import 'package:attendance_frontend/theme/theme.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
@@ -14,17 +15,19 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
-  @override
+
   List<Widget> widgets = [
-    Home(),
-    HistoryPage(),
-    Center(
+    const Home(),
+    const HistoryPage(),
+    const Center(
       child: Text('Menu ke 3'),
     ),
-    Center(
+    const Center(
       child: Text('Menu ke 4'),
     ),
   ];
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: widgets[currentIndex],
@@ -42,29 +45,29 @@ class _HomePageState extends State<HomePage> {
               backgroundColor: Colors.white,
               color: Colors.grey,
               activeColor: Colors.white,
-              tabBackgroundColor: Color.fromARGB(255, 239, 239, 239),
-              padding: EdgeInsets.all(15),
+              tabBackgroundColor: const Color.fromARGB(255, 239, 239, 239),
+              padding: const EdgeInsets.all(15),
+              // ignore: prefer_const_literals_to_create_immutables
               tabs: [
-                // ignore: prefer_const_constructors
-                GButton(
+                const GButton(
                   icon: Icons.home,
                   text: 'Home',
                   textColor: Colors.lightBlueAccent,
                   iconActiveColor: Colors.lightBlueAccent,
                 ),
-                GButton(
+                const GButton(
                   icon: Icons.history,
                   text: 'History',
                   textColor: Colors.lightBlueAccent,
                   iconActiveColor: Colors.lightBlueAccent,
                 ),
-                GButton(
+                const GButton(
                   icon: Icons.account_balance,
                   text: 'Permit',
                   textColor: Colors.lightBlueAccent,
                   iconActiveColor: Colors.lightBlueAccent,
                 ),
-                GButton(
+                const GButton(
                   icon: Icons.person,
                   text: 'My Profile',
                   textColor: Colors.lightBlueAccent,

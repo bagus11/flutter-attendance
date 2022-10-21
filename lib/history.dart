@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+// ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
-import 'theme/theme.dart';
+import 'package:attendance_frontend/theme/theme.dart';
 
 class HistoryPage extends StatefulWidget {
   const HistoryPage({Key? key}) : super(key: key);
@@ -11,9 +12,32 @@ class HistoryPage extends StatefulWidget {
 class _HistoryPageState extends State<HistoryPage> {
   @override
   Widget build(BuildContext context) {
+    PreferredSizeWidget header() {
+      return AppBar(
+        backgroundColor: whiteColor,
+        centerTitle: true,
+        elevation: 0.5,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios_new,
+            color: blueColor,
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
+        title: Text(
+          'Riwayat Absensi',
+          style: blueTextStyle.copyWith(
+            fontWeight: medium,
+            fontSize: 18.0,
+          ),
+        ),
+      );
+    }
+
     return Scaffold(
+      appBar: header(),
       body: Container(
-        margin: EdgeInsets.only(top: 20),
+        margin: const EdgeInsets.only(top: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
