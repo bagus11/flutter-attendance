@@ -12,87 +12,99 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-          child: Center(
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Text(
-            'Hello Again !',
-            style: GoogleFonts.poppins(
-              fontSize: 52,
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Text(
-            'Welcome back, you\'ve been missed !',
-            style: GoogleFonts.poppins(
-              fontSize: 18,
-            ),
-          ),
-          SizedBox(
-            height: 50,
-          ),
-          // Email
-          Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              child: Container(
-                child: TextField(
-                  decoration: InputDecoration(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Hello Again !',
+                style: GoogleFonts.poppins(
+                  fontSize: 52,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                'Welcome back, you\'ve been missed !',
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                ),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              // Email
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                // ignore: avoid_unnecessary_containers
+                child: Container(
+                  child: TextField(
+                    decoration: InputDecoration(
                       hintText: 'Username',
                       fillColor: Colors.white,
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(25.0),
                       ),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
-                          borderRadius: BorderRadius.circular(25))),
-                ),
-              )),
-          SizedBox(
-            height: 15,
-          ),
-          Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30),
-              child: Container(
-                child: TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                      hintText: 'Password',
-                      fillColor: Colors.white,
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(25.0),
+                        borderSide:
+                            const BorderSide(color: Colors.lightBlueAccent),
+                        borderRadius: BorderRadius.circular(25),
                       ),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.lightBlueAccent),
-                          borderRadius: BorderRadius.circular(25))),
-                ),
-              )),
-          SizedBox(
-            height: 15,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Container(
-              padding: EdgeInsets.all(20.0),
-              decoration: BoxDecoration(
-                  color: Colors.lightBlueAccent,
-                  borderRadius: BorderRadius.circular(25)),
-              child: Center(
-                child: Text(
-                  'Sign In',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20),
+                    ),
+                  ),
                 ),
               ),
-            ),
+              const SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                // ignore: avoid_unnecessary_containers
+                child: Container(
+                  child: TextField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                        hintText: 'Password',
+                        fillColor: Colors.white,
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25.0),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                            borderSide:
+                                const BorderSide(color: Colors.lightBlueAccent),
+                            borderRadius: BorderRadius.circular(25))),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Container(
+                  padding: const EdgeInsets.all(20.0),
+                  decoration: BoxDecoration(
+                      color: Colors.lightBlueAccent,
+                      borderRadius: BorderRadius.circular(25)),
+                  child: const Center(
+                    child: Text(
+                      'Sign In',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+            ],
           ),
-          SizedBox(
-            height: 10,
-          ),
-        ]),
-      )),
+        ),
+      ),
     );
   }
 }

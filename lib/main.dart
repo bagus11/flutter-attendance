@@ -1,8 +1,8 @@
 // ignore_for_file: unused_import
 
-import 'package:attendance_frontend/splashPage.dart';
+import 'package:attendance_frontend/splash_page.dart';
 import 'package:flutter/material.dart';
-import 'homepage.dart';
+import 'home_page.dart';
 import 'login_page.dart';
 
 void main() {
@@ -18,8 +18,9 @@ class MyApp extends StatelessWidget {
       // home: LoginPage(),
       // home: HomePage(),
       routes: {
-        '/':(context) => const SplashPage(),
-        '/home':(context) => const HomePage()
+        '/': (context) => const SplashPage(),
+        '/signIn': (context) => const LoginPage(),
+        '/home': (context) => const HomePage()
       },
     );
   }

@@ -1,5 +1,5 @@
 // ignore: unused_import
-import 'package:attendance_frontend/splashPage.dart';
+import 'package:attendance_frontend/login_page.dart';
 // ignore: unused_import
 import 'package:attendance_frontend/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -22,9 +22,10 @@ class _HomePageState extends State<HomePage> {
     const Home(),
     const HistoryPage(),
     // const SplashPage(),
-    const Center(
-      child: Text('Menu ke 3'),
-    ),
+    const LoginPage(),
+    // const Center(
+    //   child: Text('Menu ke 3'),
+    // ),
     const Center(
       child: Text('Menu ke 4'),
     ),
