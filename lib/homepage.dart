@@ -1,4 +1,6 @@
 // ignore: unused_import
+import 'package:attendance_frontend/splashPage.dart';
+// ignore: unused_import
 import 'package:attendance_frontend/theme/theme.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
@@ -19,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   List<Widget> widgets = [
     const Home(),
     const HistoryPage(),
+    // const SplashPage(),
     const Center(
       child: Text('Menu ke 3'),
     ),

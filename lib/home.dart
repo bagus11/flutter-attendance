@@ -1,9 +1,13 @@
+import 'dart:async';
+import 'dart:io';
 import 'package:attendance_frontend/theme/theme.dart';
 import 'package:attendance_frontend/widget/header.dart';
 import 'package:attendance_frontend/widget/jadwal_absen.dart';
 import 'package:attendance_frontend/widget/status_absen.dart';
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
+// ignore: unused_import
+import 'package:gallery_saver/gallery_saver.dart';
+import 'package:image_picker/image_picker.dart';
 // ignore: unused_import
 import 'history.dart';
 import 'package:attendance_frontend/widget/history.dart';
@@ -15,6 +19,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  // ignore: unused_field
+  File? _imageFile;
+  final _picker = ImagePicker();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,9 +91,7 @@ class _HomeState extends State<Home> {
         height: 65.0,
         width: 65.0,
         child: FloatingActionButton(
-          onPressed: () {
-            // Add your onPressed code here!
-          },
+          onPressed: () async => _pickImageFromCamera(),
 
           tooltip: 'Absen',
           backgroundColor: blueColor,
@@ -98,5 +104,17 @@ class _HomeState extends State<Home> {
         ),
       ),
     );
+  }
+
+  // function take photo
+  Future<void> _pickImageFromCamera() async {
+    final pickedFile = await _picker.pickImage(source: ImageSource.camera);
+    if (pickedFile != null) {
+      // ignore: unnecessary_this
+      setState(
+        () => _imageFile = File(pickedFile.path),
+      );
+      GallerySaver.saveImage(pickedFile.path);
+    }
   }
 }
