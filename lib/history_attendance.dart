@@ -23,7 +23,8 @@ class _HistoryPageState extends State<HistoryPage> {
             Icons.arrow_back_ios_new,
             color: blueColor,
           ),
-          onPressed: () => Navigator.pop(context),
+          // onPressed: () => Navigator.pop(context),
+          onPressed: () => Navigator.pushNamed(context, '/home'),
         ),
         title: Text(
           'Riwayat Absensi',

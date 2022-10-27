@@ -1,5 +1,6 @@
 // ignore_for_file: unused_import
 
+import 'package:attendance_frontend/history_attendance.dart';
 import 'package:attendance_frontend/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'home_page.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const SplashPage(),
         '/signIn': (context) => const LoginPage(),
-        '/home': (context) => const HomePage()
+        '/home': (context) => const HomePage(),
+        '/historyAttendance':(context) => const HistoryPage()
       },
     );
   }

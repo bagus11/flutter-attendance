@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:gallery_saver/gallery_saver.dart';
 import 'package:image_picker/image_picker.dart';
 // ignore: unused_import
-import 'history.dart';
+import 'history_attendance.dart';
 import 'package:attendance_frontend/widget/history.dart';
 
 class Home extends StatefulWidget {
@@ -71,13 +71,39 @@ class _HomeState extends State<Home> {
                 right: 20,
                 left: 20,
               ),
-              child: Text(
-                'Riwayat absensi 3 hari terakhir',
-                style: blackTextStyle.copyWith(
-                  fontSize: 16,
-                  fontWeight: semiBold,
-                  overflow: TextOverflow.ellipsis,
-                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Absensi 3 hari terakhir',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 16,
+                      fontWeight: semiBold,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                  GestureDetector(
+                    onTap: () =>
+                        Navigator.pushNamed(context, '/historyAttendance'),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Lihat semua',
+                          style: blackTextStyle.copyWith(
+                            fontSize: 14,
+                            fontWeight: light,
+                          ),
+                        ),
+                        // ignore: prefer_const_constructors
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          size: 15,
+                          color: blackColor,
+                        ),
+                      ],
+                    ),
+                  )
+                ],
               ),
             ),
             // history

@@ -1,3 +1,6 @@
+// ignore_for_file: avoid_unnecessary_containers
+
+import 'package:attendance_frontend/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -37,7 +40,6 @@ class _LoginPageState extends State<LoginPage> {
               // Email
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
-                // ignore: avoid_unnecessary_containers
                 child: Container(
                   child: TextField(
                     decoration: InputDecoration(
@@ -60,20 +62,21 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
-                // ignore: avoid_unnecessary_containers
                 child: Container(
                   child: TextField(
                     obscureText: true,
                     decoration: InputDecoration(
-                        hintText: 'Password',
-                        fillColor: Colors.white,
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(25.0),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide:
-                                const BorderSide(color: Colors.lightBlueAccent),
-                            borderRadius: BorderRadius.circular(25))),
+                      hintText: 'Password',
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide:
+                            const BorderSide(color: Colors.lightBlueAccent),
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -82,18 +85,23 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Container(
-                  padding: const EdgeInsets.all(20.0),
-                  decoration: BoxDecoration(
-                      color: Colors.lightBlueAccent,
-                      borderRadius: BorderRadius.circular(25)),
-                  child: const Center(
+                child: SizedBox(
+                  height: 50.0,
+                  width: double.infinity,
+                  child: TextButton(
+                    onPressed: () => Navigator.pushNamed(context, '/home'),
+                    style: TextButton.styleFrom(
+                      backgroundColor: blueColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                    ),
                     child: Text(
                       'Sign In',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20),
+                      style: whiteTextStyle.copyWith(
+                        fontWeight: bold,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 ),

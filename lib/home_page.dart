@@ -1,13 +1,13 @@
 // ignore: unused_import
-import 'package:attendance_frontend/login_page.dart';
 // ignore: unused_import
 import 'package:attendance_frontend/theme/theme.dart';
+import 'package:attendance_frontend/history_permission.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'home.dart';
-import 'history.dart';
+import 'history_attendance.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -21,8 +21,7 @@ class _HomePageState extends State<HomePage> {
   List<Widget> widgets = [
     const Home(),
     const HistoryPage(),
-    // const SplashPage(),
-    const LoginPage(),
+    const PermissionPage(),
     // const Center(
     //   child: Text('Menu ke 3'),
     // ),
