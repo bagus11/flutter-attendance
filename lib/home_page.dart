@@ -2,6 +2,7 @@
 // ignore: unused_import
 import 'package:attendance_frontend/theme/theme.dart';
 import 'package:attendance_frontend/history_permission.dart';
+import 'package:attendance_frontend/widget/floating_button_expanded.dart';
 import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:google_fonts/google_fonts.dart';
@@ -22,12 +23,13 @@ class _HomePageState extends State<HomePage> {
     const Home(),
     const HistoryPage(),
     const PermissionPage(),
+    FloatingButtonExpanded(),
     // const Center(
     //   child: Text('Menu ke 3'),
     // ),
-    const Center(
-      child: Text('Menu ke 4'),
-    ),
+    // const Center(
+    //   child: Text('Menu ke 4'),
+    // ),
   ];
 
   @override

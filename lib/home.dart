@@ -113,20 +113,16 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      floatingActionButton: SizedBox(
-        height: 65.0,
-        width: 65.0,
-        child: FloatingActionButton(
-          onPressed: () async => _pickImageFromCamera(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () async => _pickImageFromCamera(),
 
-          tooltip: 'Absen',
-          backgroundColor: blueColor,
-          elevation: 20,
-          // icon: const Icon(Icons.camera_alt_outlined),
-          child: const Icon(
-            Icons.camera_alt_outlined,
-            size: 30,
-          ),
+        tooltip: 'Absen',
+        backgroundColor: blueColor,
+        elevation: 20,
+        // icon: const Icon(Icons.camera_alt_outlined),
+        child: const Icon(
+          Icons.camera_alt_outlined,
+          // size: 30,
         ),
       ),
     );

@@ -86,6 +86,7 @@ class _ExpansionPermissionCardWidgetState
                   fontSize: 16,
                   fontWeight: medium,
                 ),
+                textAlign: TextAlign.justify,
               ),
             ),
           ),
