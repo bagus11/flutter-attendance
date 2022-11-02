@@ -5,6 +5,7 @@ Color primaryColor = const Color(0xff5C40CC);
 Color blueColor = const Color(0xff246BFD);
 Color blackColor = const Color(0xff1F1449);
 Color whiteColor = const Color(0xffFFFFFF);
+Color whiteColor2 = const Color(0xffFEFBF6);
 Color greyColor = const Color(0xff9698A9);
 Color backColor = const Color(0xffFAFAFA);
 Color cyanColor = const Color(0xff0EC3AE);

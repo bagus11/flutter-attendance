@@ -1,11 +1,6 @@
-// ignore: unused_import
-// ignore: unused_import
-import 'package:attendance_frontend/theme/theme.dart';
+import 'package:attendance_frontend/form_permission_page.dart';
 import 'package:attendance_frontend/history_permission.dart';
-import 'package:attendance_frontend/widget/floating_button_expanded.dart';
 import 'package:flutter/material.dart';
-// ignore: unused_import
-import 'package:google_fonts/google_fonts.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'home.dart';
 import 'history_attendance.dart';
@@ -23,7 +18,8 @@ class _HomePageState extends State<HomePage> {
     const Home(),
     const HistoryPage(),
     const PermissionPage(),
-    FloatingButtonExpanded(),
+    // FloatingButtonExpanded(),
+    const FormPermissionPage(),
     // const Center(
     //   child: Text('Menu ke 3'),
     // ),

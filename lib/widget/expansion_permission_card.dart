@@ -38,12 +38,19 @@ class _ExpansionPermissionCardWidgetState
         // bottom: 5,
       ),
       decoration: BoxDecoration(
+        // border: Border.all(
+        //   color: whiteColor2,
+        //   width: 1,
+        // ),
+        borderRadius: const BorderRadius.all(
+          Radius.circular(10),
+        ),
         boxShadow: [
           BoxShadow(
             color: greyColor,
-            spreadRadius: 0.5,
+            spreadRadius: 0.1,
             blurRadius: 5,
-            offset: const Offset(0, 3),
+            offset: const Offset(0, 2),
           )
         ],
       ),

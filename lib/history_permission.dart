@@ -34,6 +34,7 @@ class PermissionPage extends StatelessWidget {
 
     return Scaffold(
       appBar: header(),
+      backgroundColor: whiteColor2,
       body: SafeArea(
         child: SizedBox(
           height: MediaQuery.of(context).size.height,
@@ -43,17 +44,17 @@ class PermissionPage extends StatelessWidget {
               children: [
                 // const PermissionWidget(),
                 ExpansionPermissionCardWidget(
-                  title: 'Sick',
+                  title: 'Sakit',
                   subtitle: 'Data dalam 1 bulan terakhir',
                   color: redColor,
                 ),
                 ExpansionPermissionCardWidget(
-                  title: 'Absent',
+                  title: 'Absen',
                   subtitle: 'Data dalam 1 bulan terakhir',
                   color: orangeColor,
                 ),
                 ExpansionPermissionCardWidget(
-                  title: 'Permit',
+                  title: 'Izin',
                   subtitle: 'Data dalam 1 bulan terakhir',
                   color: navyColor,
                 ),
@@ -63,7 +64,7 @@ class PermissionPage extends StatelessWidget {
         ),
       ),
       // for floating expandable
-      
+
       floatingActionButtonLocation: ExpandableFab.location,
       floatingActionButton: ExpandableFab(
         key: key,

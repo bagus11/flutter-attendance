@@ -7,7 +7,7 @@ class StatusAbsent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 110,
+      // height: 110,
       width: MediaQuery.of(context).size.width / 1,
       margin: const EdgeInsets.only(
         top: 15,
@@ -27,61 +27,117 @@ class StatusAbsent extends StatelessWidget {
           ),
         ],
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+      child: Column(
         children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text(
-                'Sick',
-                style: redTextStyle.copyWith(
-                  fontSize: 14,
-                  fontWeight: light,
-                ),
+              Column(
+                children: [
+                  Text(
+                    'Mulai Kerja',
+                    style: blackTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: medium,
+                    ),
+                  ),
+                  Text(
+                    '08:21',
+                    style: googleTime.copyWith(
+                      fontSize: 24,
+                      color: blackColor,
+                      fontWeight: bold,
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                '4',
-                style: googleCount.copyWith(
-                  color: redColor,
-                ),
+              Column(
+                children: [
+                  Text(
+                    'Berhenti',
+                    style: redTextStyle.copyWith(
+                      fontSize: 18,
+                      fontWeight: medium,
+                    ),
+                  ),
+                  Text(
+                    '17:36',
+                    style: googleTime.copyWith(
+                      fontSize: 24,
+                      color: redColor,
+                      fontWeight: bold,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-          Column(
+          const SizedBox(
+            height: 10,
+          ),
+          const Divider(
+            thickness: 1,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text(
-                'Absent',
-                style: orangeTextStyle.copyWith(
-                  fontSize: 14,
-                  fontWeight: light,
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    'Sakit',
+                    style: redTextStyle.copyWith(
+                      fontSize: 14,
+                      fontWeight: light,
+                    ),
+                  ),
+                  Text(
+                    '4',
+                    style: googleCount.copyWith(
+                      color: redColor,
+                    ),
+                  ),
+                ],
               ),
-              Text(
-                '2',
-                style: googleCount.copyWith(
-                  color: orangeColor,
-                ),
+              Column(
+                children: [
+                  Text(
+                    'Absen',
+                    style: orangeTextStyle.copyWith(
+                      fontSize: 14,
+                      fontWeight: light,
+                    ),
+                  ),
+                  Text(
+                    '2',
+                    style: googleCount.copyWith(
+                      color: orangeColor,
+                    ),
+                  ),
+                ],
               ),
+              Column(
+                children: [
+                  Text(
+                    'Izin',
+                    style: navyTextStyle.copyWith(
+                      fontSize: 14,
+                      fontWeight: light,
+                    ),
+                  ),
+                  Text(
+                    '6',
+                    style: googleCount.copyWith(
+                      color: navyColor,
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
-          Column(
-            children: [
-              Text(
-                'Permit',
-                style: navyTextStyle.copyWith(
-                  fontSize: 14,
-                  fontWeight: light,
-                ),
-              ),
-              Text(
-                '6',
-                style: googleCount.copyWith(
-                  color: navyColor,
-                ),
-              ),
-            ],
-          )
         ],
       ),
     );

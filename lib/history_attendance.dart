@@ -15,7 +15,7 @@ class _HistoryPageState extends State<HistoryPage> {
   Widget build(BuildContext context) {
     PreferredSizeWidget header() {
       return AppBar(
-        backgroundColor: whiteColor,
+        backgroundColor: whiteColor2,
         centerTitle: true,
         elevation: 0.5,
         leading: IconButton(
